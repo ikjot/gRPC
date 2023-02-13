@@ -17,7 +17,8 @@
 
 - gRPC 
    - relies on HTTP2
-   - 
+   - code generation for APIs in supported languages
+   
 - HTTP1
   - One TCP connection per request
       - 100 images => open & close 100 TCP connections
@@ -35,3 +36,37 @@
         - Less bandwidth is required
     - SSL connection is required by default
       
+#------------------------------------------------------------------------------------      
+      
+ - Scalability
+    - Server: Async
+        - main thread is not blocked. Therefore, server can handle many reuqests in parallel
+    - Client:
+        - Free to choose between async & blocking
+
+#------------------------------------------------------------------------------------      
+        
+ - Security (SSL)
+    - Schema based serialization
+        - binary
+    - SSL encryption
+    - Interceptors for Auth
+    
+    
+#------------------------------------------------------------------------------------      
+gRPC vs Rest
+
+- gRPC
+  - Protobuf
+    - Strict schemas
+  - HTTP 2
+  - Also supports Streaming
+  - Bi-directional
+  - Free design
+
+- REST
+  - JSON
+  - HTTP 1 ( can use HTTP2 now)
+  - Unary only
+  - client -> server model
+  - CRUD APIs
