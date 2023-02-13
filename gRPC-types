@@ -1,0 +1,16 @@
+- Unary
+  - client send one request & server responds with a response
+  
+- Server Streaming
+  - enabled by HTTP2
+  - clients send one request & server returns one or more responses
+  - use cases where where clients wants to get updated values
+  
+- Client streaming
+  - Client sends one or more reuqests & server responds with one response
+  - e.g. uploading of info
+  
+- Bi directional streaming
+  - client send multiple requests & server can send multiple responses
+  - After the first request, the responses could arrive in any order you decide.
+    - You can get response per request or per two requests etc.
