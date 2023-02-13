@@ -1,2 +1,36 @@
 - Protobufs
   - Data serialization
+   - Language interop
+   
+   - Messages
+      - Intuitive messeage definition
+   - Services
+      - API endpoints
+      
+ - gRPC uses Protobufs
+    - smaller size
+    - compressed
+    - Less CPU intensive
+    - Binary
+    - faster & more efficient communication
+
+
+- gRPC 
+   - relies on HTTP2
+   - 
+- HTTP1
+  - One TCP connection per request
+      - 100 images => open & close 100 TCP connections
+  - Plaintext headers
+      - No compression
+  - more latency
+
+- HTTP2
+    - One TCP connection shared by multiple requests & responses
+    - Server push
+      - more data can be pushed without waiting
+    - Multiplexing
+        - multiple messages can be pushed in parallel over the same connection
+    - Headers &  data are compressed
+    - SSL connection is required by default
+      
