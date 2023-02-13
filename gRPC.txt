@@ -32,5 +32,6 @@
     - Multiplexing
         - multiple messages can be pushed in parallel over the same connection
     - Headers &  data are compressed
+        - Less bandwidth is required
     - SSL connection is required by default
       
